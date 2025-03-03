@@ -4,7 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="icon"
       type="image/png"
@@ -16,6 +27,11 @@
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
       :root {
         --Green500: hsl(158, 36%, 37%);
         --Green700: hsl(158, 42%, 18%);
@@ -25,30 +41,126 @@
         --White: hsl(0, 0%, 100%);
       }
       body {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
+        background-color: var(--Cream);
+        padding-top: 60px;
+      }
+      .container {
+        width: 50%;
+        margin: 0 auto;
+        background-color: var(--White);
+        border-radius: 10px;
+        display: flex;
+      }
+      .left {
+        width: 50%;
+        border-radius: 10px;
+      }
+      .chanel-img {
+        width: 100%;
+        border-radius: 10px;
+      }
+      .right {
+        width: 50%;
+      }
+      .pre-div {
+        h1 {
+          padding-right: 60px;
+        }
+
+        h1,
+        h3,
+        p {
+          margin-top: 25px;
+          margin-left: 50px;
+          margin-right: 60px;
+        }
+        h1 {
+          font-family: "Fraunces", sans-serif;
+        }
+
+        h3,
+        p {
+          font-family: "Montserrat", sans-serif;
+          color: var(--Grey);
+        }
+        p {
+          font-size: 18px;
+        }
+      }
+
+      .price-div {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        p {
+          margin-top: 25px;
+
+          font-family: "Montserrat", sans-serif;
+        }
+      }
+      .last-price {
+        margin-left: 50px;
+        font-size: 50px;
+        color: var(--Green500);
+      }
+
+      .first-price {
+        font-size: 20px;
+        text-decoration: line-through;
+        color: var(--Grey);
+      }
+      .cart {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--Green500);
+        color: white;
+        font-size: 18px;
+        font-family: "Montserrat", sans-serif;
+        padding: 15px;
+        border-radius: 10px;
+        cursor: pointer;
+        width: 80%;
+        margin: 30px auto;
+        font-weight: bold;
+        gap: 10px; /* 调整图标与文字的间距 */
+      }
+
+      .cart:hover {
+        background-color: var(--Green700);
       }
     </style>
   </head>
   <body>
+    <div class="container">
+      <div class="left">
+        <img
+          class="chanel-img"
+          alt="CHANEL"
+          src="./images/image-product-desktop.jpg"
+        />
+      </div>
+      <div class="right">
+        <div class="pre-div">
+          <h3>PERFUME</h3>
+          <h1>Gabrielle Essence Eau De Parfum</h1>
+          <p>
+            A floral, solar and voluptuous interpretation composed by Olivier
+            Polge, Perfumer-Creator for the House of CHANEL.
+          </p>
+        </div>
+
+        <div class="price-div">
+          <p class="last-price">$149.99</p>
+          <p class="first-price">$169.99</p>
+        </div>
+        <p class="cart">Add to Cart</p>
+      </div>
+    </div>
     <!--
-  Perfume
-
-  Gabrielle Essence Eau De Parfum
-
-  A floral, solar and voluptuous interpretation composed by Olivier Polge, 
-  Perfumer-Creator for the House of CHANEL.
-
-  $149.99
-  $169.99
-
-  Add to Cart
-  
-
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>-->
-  </body>
+  </div>
+  --></body>
 </html>
