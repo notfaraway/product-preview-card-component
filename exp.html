@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Product preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      :root {
+        --Green500: hsl(158, 36%, 37%);
+        --Green700: hsl(158, 42%, 18%);
+        --Black: hsl(212, 21%, 14%);
+        --Grey: hsl(228, 12%, 48%);
+        --Cream: hsl(30, 38%, 92%);
+        --White: hsl(0, 0%, 100%);
+      }
+      body {
+        background-color: var(--Cream);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+      }
+      .container {
+        width: 600px;
+        max-width: 90%;
+        margin: 0 auto;
+        background-color: var(--White);
+        border-radius: 10px;
+        display: flex;
+      }
+      .left {
+        width: 50%;
+        height: auto;
+      }
+      .chanel-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px 0 0 10px;
+      }
+      .right {
+        width: 50%;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .pre-div {
+        h1 {
+          font-family: "Fraunces", sans-serif;
+          margin: 1rem 0;
+          line-height: 1;
+        }
+        p {
+          font-family: "Montserrat", sans-serif;
+          color: var(--Grey);
+          line-height: 1.6;
+          margin: 1rem 0;
+        }
+      }
+      .price-div {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      .last-price {
+        font-size: 2rem;
+        color: var(--Green500);
+      }
+
+      .first-price {
+        text-decoration: line-through;
+        color: var(--Grey);
+      }
+      .cart {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--Green500);
+        color: white;
+        font-size: 18px;
+        font-family: "Montserrat", sans-serif;
+        padding: 15px;
+        border-radius: 10px;
+        cursor: pointer;
+        width: 100%;
+        margin: 0;
+        font-weight: bold;
+        gap: 10px; /* 调整图标与文字的间距 */
+      }
+
+      .cart:hover {
+        background-color: var(--Green700);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left">
+        <img
+          class="chanel-img"
+          alt="CHANEL"
+          src="./images/image-product-desktop.jpg"
+        />
+      </div>
+      <div class="right">
+        <div class="pre-div">
+          <h3>PERFUME</h3>
+          <h1>Gabrielle Essence Eau De Parfum</h1>
+          <p>
+            A floral, solar and voluptuous interpretation composed by Olivier
+            Polge, Perfumer-Creator for the House of CHANEL.
+          </p>
+        </div>
+
+        <div class="price-div">
+          <p class="last-price">$149.99</p>
+          <p class="first-price">$169.99</p>
+        </div>
+        <p class="cart">Add to Cart</p>
+      </div>
+    </div>
+    <!--
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  --></body>
+</html>
